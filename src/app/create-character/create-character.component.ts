@@ -7,7 +7,7 @@ import { StarWarsService } from '../star-wars.service';
   styleUrls: ['./create-character.component.css']
 })
 export class CreateCharacterComponent implements OnInit {
-  availableSides = [{display: 'None', value: ''}, {display: 'Light', value: 'light'}, {display: 'Dark', value: 'dark'}];
+  availableSides = [{display: 'None', value: ''}, {display: 'Light', value: 'dark'}, {display: 'Dark', value: 'light'}];
   swService: StarWarsService;
 
   constructor(swSerivce: StarWarsService) {
