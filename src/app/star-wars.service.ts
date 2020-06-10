@@ -21,13 +21,12 @@ export class StarWarsService {
     }
 
   fetchCharacters() {
-    this.httpClient.get('https://swapi.co/api/people').subscribe(
+    this.httpClient.get('https://swapi.dev/api/people').subscribe(
       (data) => {
         const res = data['results'];
         this.characters = res.map(char => {
           return { name: char.name, side: '' };
         });
-        console.log(this.characters);
         this.charactersChanged.next();
       }
     );
